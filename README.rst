@@ -1,4 +1,4 @@
-r.in.narr
+r.in.erai
 =========
 
 Import ERA-Interim_ fields from netCDF data files.
