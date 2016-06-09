@@ -26,11 +26,8 @@ COPYRIGHT:  (c) 2016 Julien Seguinot
 # Todo:
 # * (0.1)
 #  - seamless import 180E
-#  - check GRASS compatibility
 #  - upload to GRASS repo/wiki
 #  - add minimal HTML docs
-# * (0.2)
-#  - interactive download
 
 #%Module
 #% description: Import ERA-Interim Reanalysis fields netCDF data files.
