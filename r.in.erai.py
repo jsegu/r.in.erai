@@ -25,7 +25,6 @@ COPYRIGHT:  (c) 2016 Julien Seguinot
 
 # Todo:
 # * (0.1)
-#  - seamless import 180E
 #  - upload to GRASS repo/wiki
 #  - add minimal HTML docs
 
@@ -110,14 +109,14 @@ def main():
     a = garray.array()
     if z.shape[0] == 1:
         a[:] = z[0]
-        grass.message('Importing ' + outputmap + ' ...')
+        grass.message("Importing <%s> ..." % outputmap)
         a.write(mapname=outputmap, overwrite=True, null=-32767)
 
     # otherwise import each time slice
     else:
         for (i, data) in enumerate(z):
             mapname = outputmap + '%02i' % (i+1)
-            grass.message('Importing ' + mapname + ' ...')
+            grass.message("Importing <%s> ..." % mapname)
             a[:] = data
             a.write(mapname=mapname, overwrite=True, null=-32767)
 
@@ -129,3 +128,4 @@ if __name__ == "__main__":
 # [1] http://www.ecmwf.int/en/research/climate-reanalysis/era-interim
 # [2] http://numpy.scipy.org
 # [3] http://github.com/Unidata/netcdf4-python
+
